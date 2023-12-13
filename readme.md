@@ -1,7 +1,7 @@
 # Mock Server for Sonoff OTA
 
 ## Introduction
-This guide will help you fix OTA error by setting up a local PHP server using XAMPP or any other tool to spoof the address for Sonoff OTA updates. By utilizing OpenWRT, Pihole, or Adguard, you can redirect requests from the official server to your local server.
+This guide will help you fix OTA error by setting up a local Apache server using XAMPP or any other tool to spoof the address for Sonoff OTA updates. By utilizing OpenWRT, Pihole, or Adguard, you can redirect requests from the official server to your local server.
 
 For more details, check the [GitHub issue](https://github.com/itead/Sonoff_Devices_DIY_Tools/issues/45).
 
