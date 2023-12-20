@@ -39,6 +39,27 @@ If the spoofing is successful and you get the expected 422 error, you can procee
 
 ---
 
+## Setting Up Spoofing on AdGuard
+
+1. Install and Start AdGuard Docker
+
+2. Go to the **Filter** section and then navigate to **DNS Rewrites**.
+
+3. Add the following domain:
+   - Domain: `apid.coolkit.cn`
+
+4. Set the IP address to your mock server, where you have hosted Docker or Apache server.
+
+   ### Example:
+   - Domain: `apid.coolkit.cn`
+   - IP Address: `<your_mock_server_ip>`
+
+5. Save and Enable Protection
+
+6. **Configure your AdGuard machine IP as the DNS address in your router.**
+
+---
+
 ## OTA Flash Scripts
 
 There are two OTA scripts available:
@@ -64,6 +85,18 @@ To flash Sonoff devices using the OTA script, follow these steps:
 
 ```bash
 ./sonoff-ota-flash.sh -i 192.168.1.111
+```
+
+Alternatively, you can run it directly without manual input
+
+```bash
+curl -O https://raw.githubusercontent.com/mahipat99/sonoff-ota/main/sonoff-ota-flash-unlock.sh && chmod +x sonoff-ota-flash-unlock.sh && ./sonoff-ota-flash-unlock.sh -i 192.168.1.87 
+```
+
+If you have unlocked it through any other method, you can use this command, which skips the OTA unlock process
+
+```bash
+curl -O https://raw.githubusercontent.com/mahipat99/sonoff-ota/main/sonoff-ota-flash.sh && chmod +x sonoff-ota-flash.sh && ./sonoff-ota-flash.sh -i 192.168.1.87 
 ```
 Ensure you replace `192.168.1.111` with the actual IP address of your Sonoff device.
 
