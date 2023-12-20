@@ -265,7 +265,7 @@ main() {
 
   ota_unlock
 
-  ota_flash
+  #ota_flash
   
   echo "Please wait for your device to finish flashing."
 }
