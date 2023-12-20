@@ -263,7 +263,7 @@ main() {
 
   display_info
 
-  #ota_unlock
+  ota_unlock
 
   ota_flash
   
